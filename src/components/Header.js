@@ -1,21 +1,43 @@
-import React from "react";
-import 'bootstrap/dist/css/bootstrap.main.css';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import logo from "../logo.png";
+
 
 function Header() {
-    return (
-        <header className="bg-dark text-white py-3">
-            <div className="container">
-                <div className="d-flex justify-content-between align-items-center">
-                    <h1>Landing Page</h1>
-                    <nav>
-                        <a href="#home" className="text-white mx-2">Home</a>
-                        <a href="#features" className="text-white mx-2">Features</a>
-                        <a href="#contact" className="text-white mx-2">Contact</a>
-                    </nav>
-                </div>
-            </div>
-        </header>
-    );
+  return (
+    <section id="beranda">
+      <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+        <Container>
+          <Navbar.Brand href="#beranda">
+            <img
+              src={logo}
+              height="50"
+              className="d-inline-block align-top"
+              alt="React Bootstrap logo"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="ms-auto header d-flex justify-content-between">
+              <Nav.Link className="ms-4" href="#beranda">
+                Beranda
+              </Nav.Link>
+              <Nav.Link className="ms-4" href="#profile">
+                Profile
+              </Nav.Link>
+              <Nav.Link className="ms-4" href="#features">
+                Fasilitas
+              </Nav.Link>
+              <Nav.Link className="ms-4" href="#contact">
+                Contact
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </section>
+  );
 }
 
 export default Header;

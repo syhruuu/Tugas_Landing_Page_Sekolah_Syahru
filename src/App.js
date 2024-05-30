@@ -1,14 +1,19 @@
-import React from 'react';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Footer from './components/Footer';
-import './App.css';
-
-
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Profile from "./components/Profile";
+import Features from "./components/Features";
+import Footer from "./components/Footer";
+import "./App.css";
 
 function App() {
   return (
-    <Profile></Profile>
+    <div className="App">
+      <Header />
+      <Hero />
+      <Profile />
+      <Features />
+      <Footer />
+    </div>
   );
 }
 
